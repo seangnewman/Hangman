@@ -1,0 +1,21 @@
+#hangman-input, #hangman-guesses{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+ }
+
+ .hangman-highlight{
+     background-color: teal;
+     border-bottom: 2px white solid;
+     height: 1.25rem;
+     width: 1.25rem;
+     display:inline-block;
+     color:white;
+ }
+
+ .hangman-nonChar{
+     background-color: transparent;
+     max-height: 1.25rem;
+     max-width: 1.25rem;
+     
+ }

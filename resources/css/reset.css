@@ -1,0 +1,286 @@
+html{
+    background-color: black;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+ /* Define the settings for the Headings*/
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Georgia', Times, Times New Roman, serif; 
+}
+
+h1{
+    font-size: 1.5rem;
+}
+h2{
+    font-size:1.375rem;
+}
+  h3{
+    font-size: 1.25rem;
+}
+
+/* Define text color for body as color:#777777;
+   Set background to transparent to allow the background through
+   */
+  body{
+      background: transparent;
+      width:100%;
+      color:#777777;
+  }
+
+  /* Set the maximum width to 960 to allow Bootstrap behavor on collapsable navbar */
+main{
+  margin:0 auto;
+}
+ 
+header{
+    margin-top: 2rem;
+}
+
+/***** Bootstrap Navigation *****/
+
+ /*  Center the navbar */
+ #theNavBar {
+    margin: 0 auto;
+ }
+
+ /* Declare the max-width to allow bootstrap to remain responsive */
+.navbar{
+     height: 4.25rem; 
+     background-color: whitesmoke;
+     max-width:960px;
+     border-bottom: .1rem solid #cccccc;
+}
+ 
+.navbar-brand{
+    background-color: #4aaaa5;
+    font-weight: bold;
+ }
+
+ .navbar-default .navbar-brand {
+    color: white;
+    height: 4.05rem;
+}
+  
+h1{
+    color:#ffffff;
+    margin: .25rem 0 .25rem 0;
+    text-align: center;
+    font-size: 1.75rem;
+ }
+
+ .navbar-nav{
+     margin-top: .5rem;
+ }
+
+ ul li a{
+     border-radius: 10px;
+ }
+
+ /* Again state max width for responsiveness */
+ #mainContainer{
+        max-width: 960px;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+ }
+
+
+/* All sites are separated in left/right colun.
+   Left column is all about me */
+ #aboutMeColumn{
+  border-bottom: 1px solid #cccccc;
+  width: 100%;
+  background-color: white;
+  padding: 0 0 0 2rem;
+  margin-left: 0;
+}
+
+#aboutMeContainer{
+    width: 100%;
+}
+
+#aboutMeColumn h2{
+  font-weight: bold;
+  margin-bottom: .5rem;
+  width: 100%;
+  font-size:1.5rem;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: .5rem;
+  padding-top: .5rem;
+}
+/***********************/
+/*  Empty column       */
+/***********************/
+
+#columnBreak{
+    background-color: transparent;
+    width:2%;
+ }
+
+/***********************/
+/*  Social Media       */
+/***********************/
+
+/* Declare minimum width for right column */
+#socialMediaColumn{
+    min-width: 30%;
+    height: 25%;
+    background-color: white;
+    margin-top: 1rem;
+    text-align: center;
+    padding: 0 2rem 2rem 2rem;
+}
+#socialMediaHeader{
+    width: 100%;
+  }
+
+#socialMediaColumn h3{
+    padding-bottom: .5rem;
+    text-align: center;
+    width:100%;
+    border-bottom: 1px solid #cccccc;
+}
+
+ 
+/* Bootstrap is killing me,  back to flexbxo      */
+/* Flex the container, justify images to center  */
+#socialMediaContainer{
+    width:100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+#smContainer img{
+    height: 3.5rem;
+    width:auto;
+    margin: .5rem;
+}
+
+
+/* Footer will place itself at bottom of content */
+
+footer{
+    background-color: #666666;
+    max-width:960px;
+    text-align: center;
+    font-size:.75rem;
+    color:whitesmoke;
+    height: 4rem;
+    margin: 0 auto;
+    border-top: .5rem solid #4aaaa5;
+}
+
+#footerContainer{
+    width: 100%;
+    height: 100%;
+}
+
+/* Copywrite tag */
+#copyTag{
+    position: relative;
+    top: 40%;
+    opacity: 0.5rem;
+}
+
+
+/********************* */
+/* About Me Image     
+   Image will be used as
+   background
+/***********************/
+#aboutMeImageContainer{
+    height: 5rem;
+    width: 5rem;
+    background-color: black;
+    background-image: url("https://media-exp2.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAgkAAAAJGFkNDI0NGU0LTg0ZWMtNGMxMy1hOTU0LWY0NjNhNzAyOTYyZQ.jpg");
+    background-size: contain;
+    float: left;
+    position: relative;
+    top:0;
+    margin: 0 1rem 0rem 0;
+}
+
+/* *************************************** */
+/* Contact Page                          */
+/* *************************************** */
+form{
+    margin-bottom: 2rem;
+}
+form label{
+    width: 90%;
+    display:block;
+    margin: 1rem 1rem .25rem 0;
+    font-weight: bold;
+    opacity: .45;
+}
+
+input, textarea{
+    width:90%;
+    display:block;
+    opacity: .45;
+}
+
+/* Set minimum/maximum values 
+   To prevent button from getting 
+   too large of small */
+#emailSubmit{
+   min-width: 20%;
+   max-width:30%;
+   margin: 1rem 0 0 0;
+   padding: .25rem 0 .25rem 0;
+   color:white;
+   background-color: #4aaaa5;
+   font-weight: bold;
+   opacity: .9;
+} 
+
+/********************/
+/* Portfolio Images */
+/********************/
+
+/* Hide content that overflows this container */
+.btsrpImageContainer{
+    height: 33%;
+    overflow: hidden;
+    padding: 0;
+}
+ 
+/* If the image was expanded, gently return to previous size */
+.btsrpImageContainer img{
+    margin: 0 auto;
+    height: 10rem;
+    width: 16rem;
+    transition: .5s ease-in;
+}
+
+/* Expand image as it is hovered */
+.btsrpImageContainer img:hover{
+    height:20rem ;
+    width:auto;
+    transition: .5s ease-out;
+    overflow:hidden;
+ }
+/* Container to hold description for each image */
+ .btsrpPortfolioLabelContainer{
+    position: relative;
+    background-color: #4aaaa5;
+    color:white;
+    bottom: 3rem;
+    height: 2rem;
+    text-align: center;
+    overflow: hidden;
+    width: 16rem;
+  }
+
+.btsrpPortfolioLabelContainer p {
+    position: relative;
+    top: 10%;
+    font-style: italic;
+    font-weight: bold;
+}
