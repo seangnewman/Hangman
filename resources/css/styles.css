@@ -1,21 +1,161 @@
-#hangman-input, #hangman-guesses{
+html{
+    margin: 0 auto;
+    font-family: 'Scope One', serif;
+    font-size:18px;
+    background-color: teal;
+    color:salmon;
+}
+
+body{
+    margin:0 auto;
+    width:1060px;
+}
+
+header{
+    font-family: 'Ewert', cursive;
+    font-size: 4rem;
+}
+
+
+h1{
+    height: 2rem;
+}
+h2{
+    height: 1.75rem;
+}
+
+main{
+    width:100%;
+    height: 40rem;
+    display:flex;
+}
+
+#leftColumn{
+    width: 15%;
+    border: 2px solid blue;
+}
+article{
+    width:60%;
+    border: 2px dashed blue;
+}
+#rightColumn{
+    width:15%;
+    border: 2px solid blue;
+}
+
+#hangman-description{
+  color:salmon;
+  margin: 1rem .5rem 1rem .5rem;
+  font-size: 1.250rem;
+}
+
+/* ==============================================
+Prompt for guess and display remaining 
+Number of Guesses
+================================================= */
+
+#hangman-userInput{
+    width:100%;
+    height: 2.5rem;
+    display:inline-flex;
+    justify-content: center ;
+    color: white;
+ }
+
+ #hangman-userInput h3{
+    color: white;
+    margin: .25rem .25rem .5rem .25rem;
+ }
+
+ 
+ #remainingGuesses{
+  width:2rem;
+  height:1.75rem;
+  text-align: center;
+  margin: .25rem 2rem .25rem 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  }
+
+  #userInput{
+   width:2rem;
+   height:2rem;
+   text-align: center;
+   margin: 0 auto; 
+   }
+
+  input[type="text"]{
+    background-color: transparent;
+    color: black;
+    height: 100%;
+    border: none;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: orange;
+    }
+
+/* ==============================================
+ Display Panel of unmatched characters
+================================================= */
+
+  #hangman-input{
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: space-around;
+   font-size: 1.75rem;
+   margin: 1rem 0 1rem 0; 
+   }
+
+  .hangman-highlight{
+    background-color:white;
+    border-bottom: 2px white solid;
+    height: 2.5rem;
+    width: 2.5rem;
+    display:inline-block;
+    color:orange;
+    text-align: center;
+    font-weight: bolder;
+    }
+
+  .hangman-nonChar{
+    background-color: transparent;
+    max-height: 2.5rem;
+    max-width: 1rem;
+    }
+
+  #hangman-guesses-label{
+    color:white;
+    font-size: 1.25rem;
+    text-align: center;
+    font-weight: bold;
+    }
+
+  #hangman-guesses{
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-around;
- }
+    justify-content: center;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    color:white;
+    }
 
- .hangman-highlight{
-     background-color: teal;
-     border-bottom: 2px white solid;
-     height: 1.25rem;
-     width: 1.25rem;
-     display:inline-block;
-     color:white;
- }
+    #error-messages{
+        color:white;
+        text-transform: lowercase;
+        font-size: 1.125rem;
+    }
 
- .hangman-nonChar{
-     background-color: transparent;
-     max-height: 1.25rem;
-     max-width: 1.25rem;
-     
- }
+    
+
+  
+  userInput h3{
+      margin: .75rem .25rm .75rem .25rem;
+      padding-bottom: .75rem;
+  }
+  
+
+
+  footer{
+      width: 100%;
+      border: 2px solid pink;
+  }

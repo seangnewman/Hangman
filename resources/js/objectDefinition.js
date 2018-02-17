@@ -57,4 +57,15 @@ var theRocksFilms = [
 
 ];
 
+var theRockInsults = [
+    "The Rock is gonna lay the smackdown on your candy ass!"
+    ,"The Rock is gonna go down Know Your Role Boulevard, hang that right at Jabroni Drive, and proceed to check your candy ass in at the Smackdown Hotel."
+    ,"Know you role and shut your mouth."
+    ,"If you smell... what the Rock is cookin'!"
+    ,"The Rock says this: if the Rock hits you, he'll kill you. If he misses, the wind behind the punch will give you pneumonia and you'll die anyway, so the choice is yours, jabroni!"
+    ,"The Rock is without a doubt THE most electrifying man in sports entertainment today!"
+    ,"The jabroni beating, pie eating, trail blazing, eye brow raising, the best in the present, future and past, and if yall dont like me you can kiss the peoples ass!"
+    ,"Im gonna take this (object), shine it up real nice, turn it side ways, and stick it straight up your candy ass!"
+]
+
  
