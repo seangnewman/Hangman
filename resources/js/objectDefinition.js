@@ -93,6 +93,9 @@ var theRockInsults = [
     ,"The Rock is without a doubt THE most electrifying man in sports entertainment today!"
     ,"The jabroni beating, pie eating, trail blazing, eye brow raising, the best in the present, future and past, and if yall dont like me you can kiss the peoples ass!"
     ,"Im gonna take this (object), shine it up real nice, turn it side ways, and stick it straight up your candy ass!"
-]
+];
 
+var theRockImages = [
+    "01.jpg", "02.jpg","03.jpg", "04.jpg"
+];
  

@@ -14,16 +14,24 @@ var hangmanRock = {
     ,filmTitle : theRocksFilms[Math.floor(Math.random() * theRocksFilms.length)]
     ,charGuess : ''
     ,initializeGame(){
-      var hangmanInput = document.getElementById("hangman-input");
-      var hangmanGuesses = document.getElementById("hangman-guesses");
-      var hangmanDescription = document.getElementById("hangman-description");
-
+     
+        var hangmanInput = document.getElementById("hangman-input");
+        var hangmanGuesses = document.getElementById("hangman-guesses");
+        var hangmanDescription = document.getElementById("hangman-description");
+  
+    
       // If a previous game exists,  clear the html of for the next game.
       if(!this.isBoardEmpty()){
         this.clearElement(hangmanInput);
         this.clearElement(hangmanGuesses);
         this.clearElement(hangmanDescription);
+        this.remainingGuesses = 0;
+        this.previousGuesses = [];
+        this.filmTitle = theRocksFilms[Math.floor(Math.random() * theRocksFilms.length)];
       }
+
+     
+
       document.getElementById("hangman-description").textContent = this.filmTitle.Description;             
 
       for(var i = 0; i < this.filmTitle.Title.length; i++){
@@ -35,9 +43,14 @@ var hangmanRock = {
         }
         hangmanInput.appendChild(letterSpan);
       }
-      remainingGuesses = this.numberOfUnmatchedChars() * 2;   
+      if((remainingGuesses = this.numberOfUnmatchedChars() * 2) > 20){
+          this.remainingGuesses = 20;
+      } 
+
       document.getElementById("remainingGuesses").textContent = remainingGuesses; 
       document.getElementById("btnPlayAgain").style.visibility = "hidden";
+      document.getElementById("#error-messages").textContent = '';
+      
     } // End Initialize Board
     
     ,isBoardEmpty(){
@@ -113,19 +126,14 @@ var hangmanRock = {
         iWon.innerHTML += this.filmTitle.trailer;
         //Display the updated games won
         document.getElementById("theScore").innerText = this.gamesWon;
-         
-        
         //Display image on center of screen
         var showPoster = document.getElementById("hangman-description");
         showPoster.innerText='';
         showPoster.className = "imageContainer";
-
         var backgroundImage = './resources/images/' + this.filmTitle.image;
-
-         
-
         showPoster.style.backgroundImage ="url('" + backgroundImage + "')";
         document.getElementById("btnPlayAgain").style.visibility = "visible";
+        document.getElementById("playAgain").disabled=false;
         
       }
 
@@ -133,13 +141,25 @@ var hangmanRock = {
         //Move the trailer image to the left column
         var iLost = document.getElementById("notMyWinnings");
         iLost.innerHTML += this.filmTitle.trailer;
-        //Display the updated games won
         //Display the updated games lost
-        document.getElementById("theOtherScore").innerText = this.gamesWon;
+        document.getElementById("theOtherScore").innerText = this.gamesLost;
         //Display image on center of screen
+        var showPoster = document.getElementById("hangman-description");
+        showPoster.innerText='';
+        showPoster.className = "imageContainer";
+        // Need an index for the rocks portraits
+        var rockIndex = Math.floor(Math.random() * theRockImages.length);
+
+        var backgroundImage = './resources/images/' + theRockImages[rockIndex];
+        showPoster.style.backgroundImage ="url('" + backgroundImage + "')";
+        document.getElementById("btnPlayAgain").style.visibility = "visible";
+        document.getElementById("playAgain").disabled=false;
+
         //Hit em with an insult
-        this.throwAnInsult("error-messages");
-        alert("Play again?");
+        showPoster.innerHTML = "<div id='anotherInsult'></div>";
+        
+        this.throwAnInsult("anotherInsult");
+
       }
     } // Process Guess
 
@@ -151,7 +171,7 @@ var hangmanRock = {
  
         return true;
      }else{
-         this.gamesLost++;
+        
        return false;
      }
     }
@@ -159,6 +179,7 @@ var hangmanRock = {
     ,didYouLose(){
       //If the number of unmatched is zero
       if(remainingGuesses === 0){
+        this.gamesLost++;
         return true;
       }else{
         return false;
@@ -197,14 +218,14 @@ var hangmanRock = {
 
 }
 
-
+//Listen for keydown, capture the event key to process the 
+//user guess
 document.addEventListener("keydown",function(event){
-     
     hangmanRock.captureInput(event.key);
-    
-});
+  });
 
-
+//Listen for the keyup event.  Allows us to remove the value
+// from the textbox
 document.addEventListener("keyup",function(event){
      
     document.getElementById("userGuess").value = '';
@@ -212,8 +233,16 @@ document.addEventListener("keyup",function(event){
     
 });
 
+// If the user chooses to play again
+// Some of these may be better off moved out of the event
 document.getElementById("playAgain").addEventListener("click",function(){
-    hangmanRock.initializeGame();
+    var removePoster = document.getElementById("hangman-description");
+        //removePoster.classList.remove("imageContainer");
+        removePoster.removeAttribute("class");
+        removePoster.style.background = "none";
+        hangmanRock.initializeGame();
+        this.disabled=true;
+        
 });
  
 hangmanRock.initializeGame();
@@ -221,7 +250,6 @@ hangmanRock.initializeGame();
 
 //Adding elements to hangman-input
  
-
 
 
 

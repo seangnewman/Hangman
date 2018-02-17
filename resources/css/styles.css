@@ -2,8 +2,6 @@ html{
   
     font-family: 'Scope One', serif;
     font-size:18px;
-     
-
 }
 
 body{
@@ -14,10 +12,37 @@ body{
 }
 
 header{
-    font-family: 'Ewert', cursive;
+    font-family: 'Bevan', cursive;
     font-size: 4rem;
+    text-align: center;
+    margin: 0rem 0 1rem 0;
+    display:flex;
+    margin-bottom: 0;
 }
 
+header h1{
+    width: 70%;
+    margin-top:4rem;
+}
+
+#leftHeaderImg{
+    background-color: black;
+    background-image: url("../images/superman.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 10rem;;
+    width: 15%;
+}
+
+
+#rightHeaderImg{
+    background-color: black;
+    background-image: url("../images/johnny-bravo-the-rock.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 10rem;;
+    width: 15%;
+}
 
 h1{
     height: 2rem;
@@ -26,10 +51,20 @@ h2{
     height: 1.75rem;
 }
 
+article h2{
+    text-align: center;
+    background-color: orange;
+    margin-top:0;
+    height: 2.125rem;
+    color:teal;
+    font-weight: bold;
+}
+
 main{
     width:100%;
     height: 40rem;
     display:flex;
+    
 }
 
 #leftColumn{
@@ -183,17 +218,15 @@ Number of Guesses
          height: 25rem; 
          overflow: hidden;
          margin: 0 auto;
-         
-         background-size: cover;
+         background-size: 100% 100%;
          background-repeat: no-repeat;
          text-align: center;
-         
      }
 
      #btnPlayAgain{
          text-align: center;
          position:absolute;
-         bottom:0;
+         bottom:40%;
          left: 48%;
           
           
