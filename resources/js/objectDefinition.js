@@ -3,16 +3,16 @@
 //Object Definitions for Game
 var theRocksFilms = [
     {
-      Title : "Jumanji: Welcome to the Jungle",   
-      Description : "Four high school kids discover an old video game console and are drawn into the game's jungle setting, literally becoming the adult avatars they chose. What they discover is that you don't just play Jumanji - you must survive it. To beat the game and return to the real world, they'll have to go on the most dangerous adventure of their lives, discover what Alan Parrish left 20 years ago, and change the way they think about themselves - or they'll be stuck in the game forever.",
-      image:'jumanji.jpg',
-      trailer :"<iframe src='https://www.youtube.com/embed/2QKg5SZ_35I' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>"
+        Title : "Jumanji: Welcome to the Jungle",   
+        Description : "Four high school kids discover an old video game console and are drawn into the game's jungle setting, literally becoming the adult avatars they chose. What they discover is that you don't just play Jumanji - you must survive it. To beat the game and return to the real world, they'll have to go on the most dangerous adventure of their lives, discover what Alan Parrish left 20 years ago, and change the way they think about themselves - or they'll be stuck in the game forever.",
+        image:'jumanji.jpg',
+        trailer :"<iframe src='https://www.youtube.com/embed/2QKg5SZ_35I' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>"
     },
     {
-      Title : "Baywatch",
-      Description : "When a dangerous crime wave hits the beach, the legendary Mitch Buchannon leads his elite squad of lifeguards on a mission to prove that you don't have to wear a badge to save the bay. Joined by a trio of hotshot recruits, including former Olympian Matt Brody, they ditch the surf and go deep under cover to take down a ruthless businesswoman whose devious plans threaten the future of the bay.",
-      image:'Baywatch.jpg',
-      trailer : '<iframe  src="https://www.youtube.com/embed/eyKOgnaf0BU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
+        Title : "Baywatch",
+        Description : "When a dangerous crime wave hits the beach, the legendary Mitch Buchannon leads his elite squad of lifeguards on a mission to prove that you don't have to wear a badge to save the bay. Joined by a trio of hotshot recruits, including former Olympian Matt Brody, they ditch the surf and go deep under cover to take down a ruthless businesswoman whose devious plans threaten the future of the bay.",
+        image:'Baywatch.jpg',
+        trailer : '<iframe  src="https://www.youtube.com/embed/eyKOgnaf0BU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
     },
     {
         Title : "Moana",
@@ -80,7 +80,21 @@ var theRocksFilms = [
         Description : "Rough-and-tumble hockey player Derek Thompson (Dwayne Johnson) is a terror on the ice, earning the nickname 'Tooth Fairy' by separating opposing players from their choppers. When Derek dashes the dreams of a young fan, he is quickly sentenced to serve time as a real tooth fairy, complete with wings and magic wand. Though he can't 'handle the tooth' at first, Derek's new job helps him to slowly rediscover the dreams that he gave up long ago.",
         image: 'ToothFairy.jpg',
         trailer : '<iframe  src="https://www.youtube.com/embed/JqnjK79fGSw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
+    },
+    {
+        Title : "Faster",
+        Description : "Following a 10-year prison stint, Driver (Dwayne Johnson) sprints through the gates to take vengeance on those responsible for his brother's murder. Within hours of dispatching his first one, he has two men on his tail: a veteran police officer (Billy Bob Thornton) and an eager assassin (Oliver Jackson-Cohen). Driver tries to stay a step ahead of his pursuers, but there are hints that his list is incomplete, and the unknown person may endanger his life.",
+        image: 'Faster.jpg',
+        trailer : '<iframe src="https://www.youtube.com/embed/Buf4_Crt27c" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
+    },
+    {
+        Title : "Fast Five",
+        Description : "Ever since ex-cop Brian O'Conner (Paul Walker) and Mia Torretto (Jordana Brewster) broke her brother Dom (Vin Diesel) out of custody, they've traveled border to border to evade authorities. In Rio de Janeiro, they must do one final job before they can gain their freedom for good. Assembling their elite team of car racers, Brian and Dom know they must confront the corrupt businessman who wants them dead, before the federal agent (Dwayne Johnson) on their trail finds them.",
+        image: 'FastFive.jpg',
+        trailer : '<iframe src="https://www.youtube.com/embed/mw2AqdB5EVA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
     }
+
+
 
 ];
 

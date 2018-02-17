@@ -6,7 +6,7 @@ html{
 
 body{
     margin:0 auto;
-    width:1060px;
+    width:1260px;
     background-color: teal;
     color:salmon;
 }
@@ -142,7 +142,7 @@ Number of Guesses
 
   .hangman-highlight{
     background-color:white;
-    border-bottom: 2px white solid;
+    border-radius: 50%;
     height: 2.5rem;
     width: 2.5rem;
     display:inline-block;
@@ -177,6 +177,7 @@ Number of Guesses
         color:white;
         text-transform: lowercase;
         font-size: 1.125rem;
+        text-align: center;
     }
     /* ==========================
       Left/Right  Column Stylings

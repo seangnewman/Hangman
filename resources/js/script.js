@@ -43,11 +43,13 @@ var hangmanRock = {
         }
         hangmanInput.appendChild(letterSpan);
       }
-      if((remainingGuesses = this.numberOfUnmatchedChars() * 2) > 20){
+      if((this.numberOfUnmatchedChars() * 2) > 20){
           this.remainingGuesses = 20;
-      } 
+      } else{
+        this.remainingGuesses = this.numberOfUnmatchedChars() * 2;
+      }
 
-      document.getElementById("remainingGuesses").textContent = remainingGuesses; 
+      document.getElementById("remainingGuesses").textContent = this.remainingGuesses; 
       document.getElementById("btnPlayAgain").style.visibility = "hidden";
       document.getElementById("#error-messages").textContent = '';
       
@@ -111,9 +113,9 @@ var hangmanRock = {
             numberOfMatches[i].setAttribute("data-matched","true");
           }
         }else{
-            remainingGuesses--;
+            this.remainingGuesses--;
             this.throwAnInsult("error-messages");
-            document.getElementById("remainingGuesses").textContent = remainingGuesses;
+            document.getElementById("remainingGuesses").textContent = this.remainingGuesses;
           }
         }else{
         // Invalid Character, throw an insult
@@ -157,7 +159,6 @@ var hangmanRock = {
 
         //Hit em with an insult
         showPoster.innerHTML = "<div id='anotherInsult'></div>";
-        
         this.throwAnInsult("anotherInsult");
 
       }
@@ -178,7 +179,7 @@ var hangmanRock = {
 
     ,didYouLose(){
       //If the number of unmatched is zero
-      if(remainingGuesses === 0){
+      if(this.remainingGuesses === 0){
         this.gamesLost++;
         return true;
       }else{
@@ -213,7 +214,7 @@ var hangmanRock = {
     ,throwAnInsult(targetElementID){
         var insultIndex = Math.floor(Math.random() * theRockInsults.length);
         var insultMessage = document.getElementById(targetElementID);
-        insultMessage.textContent = theRockInsults[insultIndex];
+        insultMessage.textContent = '"' + theRockInsults[insultIndex] + '"';
     }
 
 }
