@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>Film's of the Rock</title>
+      <!-- Reset all browser defaults -->
+      <link rel="stylesheet" type="text/css" href="./resources/css/reset.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Bevan" rel="stylesheet"> 
+      <link href="https://fonts.googleapis.com/css?family=Ewert|Scope+One" rel="stylesheet"> 
+      <link rel="stylesheet" type="text/css" href="./resources/css/styles.css">
+
+  </head>
+  <body>
+    <header>
+      <div id="leftHeaderImg"></div>
+       <h1>Movie Quiz featuring the Rock</h1>
+       <div id="rightHeaderImg"></div>
+    </header>
+
+    <main>
+      <section id="leftColumn">
+        <div class="scoreContainer">
+          <div class="scoreHeading">My Score :</div>
+          <div id="theScore"></div>
+        </div>
+        <div id="myWinnings"></div>
+      </section>
+      
+      <article>
+        <h2>Do You Recognize this film?</h2> 
+        <div id="description-container"> 
+        <div id="btnPlayAgain"><button id="playAgain" class="btn btn-success btn-lg">Play Again</button></div>
+        <div id="hangman-description">
+
+        </div> 
+        </div> 
+        </div>
+        <section id="hangman-userInput">
+          <h3>Your Guess : </h3>
+          <div id="userInput">
+            <input id="userGuess" type="text" maxlength="1" size=1>
+          </div>
+          <h3>Remaining : </h3>
+          <div id="remainingGuesses"></div>
+          <section id="right"></section>
+        </section>
+        <section id="hangman-input"></section>
+        <div id="hangman-guesses-label">Your Previous Guesses:</div>
+        <section id="hangman-guesses"></section>
+        <section id="error-messages"></section>
+      </article>
+      <section id="rightColumn">
+        <div class="scoreContainer">
+          <div class="scoreHeading">Losses:</div>
+          <div id="theOtherScore"></div>
+        </div>
+        <div id="notMyWinnings"></div>
+      </section>
+    </main>
+      
+    <!-- Adding script to bottom of document to be sure DOM has loaded -->
+    <script type="text/javascript" src="./resources/js/objectDefinition.js"></script>
+    <script type="text/javascript" src="./resources/js/script.js"></script>
+  </body>
+</html>
