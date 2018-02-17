@@ -7,7 +7,8 @@
 //Create an object to control each game
 var hangmanRock = {
     validChars : /^[A-Za-z]/
-    ,gamesWon : 0                                                                             //Indicates the number of games won
+    ,gamesWon : 0  
+    ,gamesLost : 0                                                                           //Indicates the number of games won
     ,remainingGuesses : 0  
     ,previousGuesses : []                                                                   //Indicates number of attempts remaining in current game
     ,filmTitle : theRocksFilms[Math.floor(Math.random() * theRocksFilms.length)]
@@ -36,6 +37,7 @@ var hangmanRock = {
       }
       remainingGuesses = this.numberOfUnmatchedChars() * 2;   
       document.getElementById("remainingGuesses").textContent = remainingGuesses; 
+      document.getElementById("btnPlayAgain").style.visibility = "hidden";
     } // End Initialize Board
     
     ,isBoardEmpty(){
@@ -107,15 +109,33 @@ var hangmanRock = {
 
       if(this.didYouWin()){
         //Move the trailer image to the left column
+        var iWon = document.getElementById("myWinnings");
+        iWon.innerHTML += this.filmTitle.trailer;
         //Display the updated games won
+        document.getElementById("theScore").innerText = this.gamesWon;
+         
+        
         //Display image on center of screen
-        console.log("Congratulations!");
-        alert("Play again?");
+        var showPoster = document.getElementById("hangman-description");
+        showPoster.innerText='';
+        showPoster.className = "imageContainer";
+
+        var backgroundImage = './resources/images/' + this.filmTitle.image;
+
+         
+
+        showPoster.style.backgroundImage ="url('" + backgroundImage + "')";
+        document.getElementById("btnPlayAgain").style.visibility = "visible";
+        
       }
 
       if(this.didYouLose()){
         //Move the trailer image to the left column
+        var iLost = document.getElementById("notMyWinnings");
+        iLost.innerHTML += this.filmTitle.trailer;
         //Display the updated games won
+        //Display the updated games lost
+        document.getElementById("theOtherScore").innerText = this.gamesWon;
         //Display image on center of screen
         //Hit em with an insult
         this.throwAnInsult("error-messages");
@@ -127,8 +147,11 @@ var hangmanRock = {
      //If the number of unmatched is zero
      if (this.numberOfUnmatchedChars() === 0){
       this.gamesWon++;
+
+ 
         return true;
      }else{
+         this.gamesLost++;
        return false;
      }
     }
@@ -187,6 +210,10 @@ document.addEventListener("keyup",function(event){
     document.getElementById("userGuess").value = '';
     
     
+});
+
+document.getElementById("playAgain").addEventListener("click",function(){
+    hangmanRock.initializeGame();
 });
  
 hangmanRock.initializeGame();
